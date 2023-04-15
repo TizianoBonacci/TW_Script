@@ -245,6 +245,18 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "flask-cors"
+version = "3.0.10"
+description = "A Flask extension adding a decorator for CORS support"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.dependencies]
+Flask = ">=0.9"
+Six = "*"
+
+[[package]]
 name = "frozenlist"
 version = "1.3.3"
 description = "A list-like structure which implements collections.abc.MutableSequence"
@@ -953,7 +965,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "fdaada1d650c04bbcc90db0b197f1042568c21f474f0b65995f470be141a0c28"
+content-hash = "170484881a6a39c1851724228f0fed3674e21dae8c35345a11c12133fe973b05"
 
 [metadata.files]
 aiohttp = []
@@ -975,6 +987,7 @@ cryptography = []
 debugpy = []
 firebase-admin = []
 flask = []
+flask-cors = []
 frozenlist = []
 google-api-core = []
 google-api-python-client = []

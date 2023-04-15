@@ -10,7 +10,7 @@ from firebase_admin import db
 cred = credentials.Certificate("contatoretw-firebase-adminsdk-mzqnw-6fcec2f4a2.json")
 firebase_admin.initialize_app(cred, {'databaseURL': 'https://contatoretw-default-rtdb.firebaseio.com/'})
 
-# Ottieni l'indirizzo IP pubblico dell'utente
+# Ottieni l'indirizzo IP dell'instanza replit dell'utente (NO IP UTENTE)
 def get_public_ip():
     response = requests.get("https://api.ipify.org?format=json")
     ip_data = response.json()
@@ -55,9 +55,9 @@ def update_counter(counter):
   
 def menu():
     print("Cosa vuoi fare?")
-    print("1. Calcolare il tempo di addestramento")
-    print("2. Calcolatore monete/risorse conio monete")
-    print("3. Ricerca migliore villaggio per conio")
+    print("1. Calcolare il tempo di addestramento (In progress)")
+    print("2. Calcolare monete e risorse per nobili. (In progress)")
+    print("3. Ricercare il migliore villaggio dove coniare")
 
 
     #print("0. Esci")
@@ -72,7 +72,7 @@ counter += 1
 update_counter(counter)
 ip = get_public_ip()
 num_unique_users = save_unique_ip(ip)
-print(f"Questo script è stato utilizzato {counter} volte!. Da {unique_users} utenti")
+print(f"Questo script è stato utilizzato {counter} volte da {unique_users} utenti! Created by fjd00")
 print("\n")
 while True:
 
